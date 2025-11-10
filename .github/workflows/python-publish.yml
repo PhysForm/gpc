@@ -28,7 +28,7 @@ jobs:
 
       - name: Build release distributions
         run: |
-          # NOTE: put your own distribution build steps here.
+          # Installation Steps:
           python -m pip install build
           python -m build
 
@@ -39,7 +39,7 @@ jobs:
           path: dist/
 
   pypi-publish:
-    runs-on: ubuntu-latest
+    runs-on: any
     needs:
       - release-build
     permissions:
